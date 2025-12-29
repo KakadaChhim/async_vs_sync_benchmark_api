@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11206.111
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "async_vs_sync_ benchmark_api", "async_vs_sync_ benchmark_api.csproj", "{865792F7-B6B1-E4F8-7403-D2E5C2ACDFE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{865792F7-B6B1-E4F8-7403-D2E5C2ACDFE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865792F7-B6B1-E4F8-7403-D2E5C2ACDFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865792F7-B6B1-E4F8-7403-D2E5C2ACDFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865792F7-B6B1-E4F8-7403-D2E5C2ACDFE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C32F4C0-1AA6-47F5-80B6-07627A1CA7C9}
+	EndGlobalSection
+EndGlobal

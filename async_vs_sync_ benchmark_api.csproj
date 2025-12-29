@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>async_vs_sync_ benchmark_api</RootNamespace>
+		<UserSecretsId>7f339169-10f7-4891-920b-8b09a451dc9f</UserSecretsId>
+
+		<!-- Prevents Docker tools from loading and causing Access Denied errors -->
+		<DisableDockerTools>true</DisableDockerTools>
+
+		<!-- Locks EF Core tools to 8.0.x forever – fixes the "ef.dll does not exist" error on .NET 10 SDK -->
+		<MicrosoftEntityFrameworkCoreToolsVersion>8.0.11</MicrosoftEntityFrameworkCoreToolsVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Mapping -->
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="HtmlAgilityPack" Version="1.12.4" />
+
+		<!-- JSON Serialization -->
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.11" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.8.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.8.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+
+		<!-- Entity Framework Core -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+
+		<!-- PostgreSQL -->
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime" Version="8.0.11" />
+
+		<!-- Redis Cache -->
+		<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.11" />
+		<PackageReference Include="RazorEngineCore" Version="2024.4.1" />
+
+		<!-- Logging -->
+		<PackageReference Include="Serilog" Version="4.1.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+
+		<!-- Swagger -->
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+
+		<!-- Utilities – upgraded to fix CVE-2024-45294 -->
+		<PackageReference Include="System.Linq.Dynamic.Core" Version="1.6.0" />
+
+		<PackageReference Include="RestSharp" Version="112.1.0" />
+
+		<PackageReference Include="Telegram.Bot" Version="22.7.6" />
+	</ItemGroup>
+
+</Project>

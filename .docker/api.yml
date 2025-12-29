@@ -1,0 +1,28 @@
+version: "3.2"
+services:
+  api-ctn:
+    image: "${REGISTRY}/tenant-mgt-api:dev"
+    restart: always
+    ports:
+      - 2501:80
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=35.219.85.209;Port=5060;Username=postgres;Password=Dev7866;Database=dev_tenant;
+      - RedisUrl=35.219.85.209:7098,password=RedDev7866
+      - Swagger__RoutePrefix=tenant-mgt
+      - Security__ReqTime=15
+      - CorsOrigins=http://localhost:4200;http://35.219.85.209/tenant-mgt;https://k1mhv9nn-4200.asse.devtunnels.ms
+      - FileUpload__FilePath=/app/uploads/www/files
+      - FileUpload__MaxImageSizeMB=5
+      - FileUpload__AllowedExtensions__0=.jpg
+      - FileUpload__AllowedExtensions__1=.jpeg
+      - FileUpload__AllowedExtensions__2=.png
+      - FileUpload__AllowedExtensions__3=.gif
+      - FileUpload__AllowedExtensions__4=.bmp
+      - FileUpload__AllowedExtensions__5=.tiff
+      - FileUpload__AllowedExtensions__6=.tif
+      - FileUpload__AllowedExtensions__7=.webp
+      - FileUpload__AllowedExtensions__8=.svg
+      - FileUpload__AllowedExtensions__9=.ico
+
