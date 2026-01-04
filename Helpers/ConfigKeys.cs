@@ -6,7 +6,7 @@
     public static class DatabaseConfigKeys
     {
         public const string ConnectionString = "DefaultConnection"; 
-        public const string TenantMgtVersion = "TenantMgt_Version";
+        public const string TenantMgtVersion = "Benchmark_Version";
     }
 
     /// <summary>
